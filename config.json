@@ -1,0 +1,8 @@
+{
+    "global": {
+        "appName": "template-flask-api"
+    },
+    "dev": {},
+    "staging": {},
+    "prod": {}
+}
