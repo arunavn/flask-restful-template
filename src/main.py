@@ -6,10 +6,10 @@ import os
 from flask import Flask
 from dotenv import load_dotenv
 
-# inporting the blueprints
+# inporting the blueprintsd
 from src.blueprints.student.student import create_student_bp
 from src.blueprints.teacher.teacher import create_teacher_bp
-from config import ApplicationConfig
+from .config import ApplicationConfig
 
 # load env file
 load_dotenv(dotenv_path=os.path.join('.', '.env'))

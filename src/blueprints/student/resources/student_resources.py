@@ -32,7 +32,7 @@ class Student(Resource):
             df1 = get_query_results_as_df(con, f"""
                                         SELECT * FROM student
                                         where id = {value};"""
-                                          )
+                                          ) # noqa
             x = df1.to_json(orient="records")
             x = json.loads(x)
             con.close()
