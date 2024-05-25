@@ -1,9 +1,12 @@
+"""Db Utilities methods
+"""
 import os
 import psycopg2
 import pandas as pd
 
 # from dotenv import load_dotenv
 # load_dotenv(dotenv_path=os.path.join('.', '.env'))
+
 
 def connect_to_postgres_db1() -> psycopg2.extensions.connection:
     """Connects to a PostgreSQL database.
@@ -19,7 +22,19 @@ def connect_to_postgres_db1() -> psycopg2.extensions.connection:
     )
     return conn
 
-def get_query_results_as_df(con: psycopg2.extensions.connection, query: str) -> pd.DataFrame:
+
+def get_query_results_as_df(con: psycopg2.extensions.connection,
+                            query: str
+                            ) -> pd.DataFrame:
+    """_summary_
+
+    Args:
+        con (psycopg2.extensions.connection): connection object
+        query (str): query string
+
+    Returns:
+        pd.DataFrame: reslt df
+    """
     df = pd.read_sql(query, con)
     return df
 
