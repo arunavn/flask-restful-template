@@ -1,8 +1,14 @@
 {
     "global": {
-        "appName": "template-flask-api"
+        "app_name": "template-flask-api"
     },
-    "dev": {},
-    "staging": {},
-    "prod": {}
+    "dev": {
+        "school_name": "dev school"
+    },
+    "staging": {
+        "school_name": "staging school"
+    },
+    "prod": {
+        "school_name": "prod school"
+    }
 }

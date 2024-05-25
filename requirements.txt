@@ -1,6 +1,11 @@
 # Dev environment
 pip
-autopep8
+autopep8==2.1.1
 
 # App
-flask
+Flask==3.0.3
+Flask-RESTful==0.3.10
+python-dotenv==1.0.1
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.1
+pandas==2.2.2

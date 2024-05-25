@@ -1,0 +1,71 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "test-flask-api-01",
+    "dateExported": "2024-05-25T12:53:40.303Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "31edda5c-7f56-40d8-b2ce-52b841c4a2e8",
+            "name": "student",
+            "containerId": "",
+            "created": "2024-05-25T12:49:34.807Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "d6b3b6a3-5c1d-4091-bf83-b2dfbab29929",
+            "name": "teacher",
+            "containerId": "",
+            "created": "2024-05-25T12:49:53.922Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "0a65858c-f366-4c72-ba72-dff5bbb70a4e",
+            "colId": "e9dd1df2-d4fb-4034-b57c-eb545f338298",
+            "containerId": "31edda5c-7f56-40d8-b2ce-52b841c4a2e8",
+            "name": "get_student",
+            "url": "localhost:3001/student/1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-05-25T12:48:25.957Z",
+            "modified": "2024-05-25T12:48:40.383Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "72b24882-fbf8-4906-bbe2-31e22e2edcda",
+            "colId": "e9dd1df2-d4fb-4034-b57c-eb545f338298",
+            "containerId": "d6b3b6a3-5c1d-4091-bf83-b2dfbab29929",
+            "name": "create_teacher",
+            "url": "localhost:3001/teacher/1",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-05-25T12:52:03.382Z",
+            "modified": "2024-05-25T12:53:09.752Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Just c., Teacher\",\n  \"subjects\": \"English\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "63086a1b-11cc-4187-a333-46cad66dd190",
+            "colId": "e9dd1df2-d4fb-4034-b57c-eb545f338298",
+            "containerId": "d6b3b6a3-5c1d-4091-bf83-b2dfbab29929",
+            "name": "get_teacher",
+            "url": "localhost:3001/teacher/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-05-25T12:50:05.304Z",
+            "modified": "2024-05-25T12:50:13.632Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
