@@ -2,7 +2,7 @@
 """
 from flask import Blueprint
 from flask_restful import Api
-from .resources.student_resources import Student
+from src.blueprints.student.resources import student_resources
 
 
 def create_student_bp() -> Blueprint:
@@ -15,5 +15,6 @@ def create_student_bp() -> Blueprint:
     api = Api(student_bp)
 
     # Add resources
-    api.add_resource(Student, '/', '/<string:value>')
+    api.add_resource(student_resources.Student, '/')
+    api.add_resource(student_resources.Students, '/students')
     return student_bp

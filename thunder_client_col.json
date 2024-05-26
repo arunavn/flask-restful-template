@@ -1,49 +1,67 @@
 {
     "client": "Thunder Client",
     "collectionName": "test-flask-api-01",
-    "dateExported": "2024-05-25T12:53:40.303Z",
+    "dateExported": "2024-05-26T07:59:46.245Z",
     "version": "1.1",
     "folders": [
         {
-            "_id": "31edda5c-7f56-40d8-b2ce-52b841c4a2e8",
+            "_id": "a2e5085a-4b94-4035-9fc1-9fb4da2b2147",
             "name": "student",
             "containerId": "",
-            "created": "2024-05-25T12:49:34.807Z",
+            "created": "2024-05-25T12:55:11.770Z",
             "sortNum": 10000
         },
         {
-            "_id": "d6b3b6a3-5c1d-4091-bf83-b2dfbab29929",
+            "_id": "10bd8e27-9c73-4ae2-8587-396cf4c2bd7b",
             "name": "teacher",
             "containerId": "",
-            "created": "2024-05-25T12:49:53.922Z",
+            "created": "2024-05-25T12:55:11.771Z",
             "sortNum": 20000
+        },
+        {
+            "_id": "b6046120-3644-404a-a289-998ac6f0250e",
+            "name": "students",
+            "containerId": "",
+            "created": "2024-05-26T07:12:58.679Z",
+            "sortNum": 40000
         }
     ],
     "requests": [
         {
-            "_id": "0a65858c-f366-4c72-ba72-dff5bbb70a4e",
-            "colId": "e9dd1df2-d4fb-4034-b57c-eb545f338298",
-            "containerId": "31edda5c-7f56-40d8-b2ce-52b841c4a2e8",
+            "_id": "ff3d024e-9655-4a17-b338-6db2408ac487",
+            "colId": "04579793-cdfe-47ce-a53b-f6438fb0331b",
+            "containerId": "a2e5085a-4b94-4035-9fc1-9fb4da2b2147",
             "name": "get_student",
-            "url": "localhost:3001/student/1",
+            "url": "localhost:3000/student?id=1&name=Just A., Student",
             "method": "GET",
             "sortNum": 10000,
-            "created": "2024-05-25T12:48:25.957Z",
-            "modified": "2024-05-25T12:48:40.383Z",
+            "created": "2024-05-25T12:55:11.770Z",
+            "modified": "2024-05-26T06:53:16.125Z",
             "headers": [],
-            "params": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "name",
+                    "value": "Just A., Student",
+                    "isPath": false
+                }
+            ],
             "tests": []
         },
         {
-            "_id": "72b24882-fbf8-4906-bbe2-31e22e2edcda",
-            "colId": "e9dd1df2-d4fb-4034-b57c-eb545f338298",
-            "containerId": "d6b3b6a3-5c1d-4091-bf83-b2dfbab29929",
+            "_id": "250f9337-c4ca-460e-bb6b-44a730708505",
+            "colId": "04579793-cdfe-47ce-a53b-f6438fb0331b",
+            "containerId": "10bd8e27-9c73-4ae2-8587-396cf4c2bd7b",
             "name": "create_teacher",
-            "url": "localhost:3001/teacher/1",
+            "url": "localhost:3000/teacher/1",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-05-25T12:52:03.382Z",
-            "modified": "2024-05-25T12:53:09.752Z",
+            "created": "2024-05-25T12:55:11.773Z",
+            "modified": "2024-05-26T06:49:44.685Z",
             "headers": [],
             "params": [],
             "body": {
@@ -54,17 +72,69 @@
             "tests": []
         },
         {
-            "_id": "63086a1b-11cc-4187-a333-46cad66dd190",
-            "colId": "e9dd1df2-d4fb-4034-b57c-eb545f338298",
-            "containerId": "d6b3b6a3-5c1d-4091-bf83-b2dfbab29929",
+            "_id": "792c0509-645d-490f-836e-96c71b51525e",
+            "colId": "04579793-cdfe-47ce-a53b-f6438fb0331b",
+            "containerId": "10bd8e27-9c73-4ae2-8587-396cf4c2bd7b",
             "name": "get_teacher",
-            "url": "localhost:3001/teacher/1",
+            "url": "localhost:3000/teacher/1",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-05-25T12:50:05.304Z",
-            "modified": "2024-05-25T12:50:13.632Z",
+            "created": "2024-05-25T12:55:11.772Z",
+            "modified": "2024-05-26T06:49:28.525Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9bb8f50b-cb03-4cf7-88fb-7c346f50eea8",
+            "colId": "04579793-cdfe-47ce-a53b-f6438fb0331b",
+            "containerId": "b6046120-3644-404a-a289-998ac6f0250e",
+            "name": "get_multiple_students",
+            "url": "localhost:3000/student/students",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-05-26T07:13:16.564Z",
+            "modified": "2024-05-26T07:17:25.684Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "18b11c17-cd91-4bae-a447-ad6654898d8a",
+            "colId": "04579793-cdfe-47ce-a53b-f6438fb0331b",
+            "containerId": "b6046120-3644-404a-a289-998ac6f0250e",
+            "name": "create_multiple_student",
+            "url": "localhost:3000/student/students",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-05-26T07:43:48.204Z",
+            "modified": "2024-05-26T07:51:26.565Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "[\n  {\n    \"name\": \"Just A., Student\",\n    \"father_name\": \"Just A., Father\"\n  },\n  {\n    \"name\": \"Just B., Student\",\n    \"father_name\": \"Just B., Father\"\n  }\n]",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3237e82b-9664-44a5-a821-11d86b29f342",
+            "colId": "04579793-cdfe-47ce-a53b-f6438fb0331b",
+            "containerId": "a2e5085a-4b94-4035-9fc1-9fb4da2b2147",
+            "name": "create_sudent",
+            "url": "localhost:3000/student",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-05-26T07:54:36.164Z",
+            "modified": "2024-05-26T07:57:35.210Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "  {\n    \"name\": \"Just B., Student\",\n    \"father_name\": \"Just B., Father\"\n  }",
+                "form": []
+            },
             "tests": []
         }
     ]
