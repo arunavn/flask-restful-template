@@ -38,6 +38,27 @@ def get_query_results_as_df(con: psycopg2.extensions.connection,
     df = pd.read_sql(query, con)
     return df
 
+
+def insert_dict_to_db(
+    data: dict,
+    table_name: str,
+    con: psycopg2.extensions.connection
+        ):
+    """_summary_
+
+    Args:
+        data (dict): _description_
+        table_name (str): _description_
+        con (psycopg2.extensions.connection): _description_
+    """
+    cols_str = ', '.join(data.keys())
+    val = data.values()
+    value_list = [f"'{v}'" if isinstance(v, str) else str(v) for v in val]
+    value_str = ', '.join(value_list)
+    query = f"INSERT INTO {table_name} ({cols_str}) VALUES ({value_str})"
+    con.cursor().execute(query)
+    con.commit()
+
 # con = connect_to_postgres_db1()
 # df1 = get_query_results_as_df(con, "SELECT * FROM student;")
 # x = df1.to_json(orient="records")

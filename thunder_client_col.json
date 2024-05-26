@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "test-flask-api-01",
-    "dateExported": "2024-05-26T07:59:46.245Z",
+    "dateExported": "2024-05-26T08:56:39.682Z",
     "version": "1.1",
     "folders": [
         {
@@ -32,21 +32,21 @@
             "colId": "04579793-cdfe-47ce-a53b-f6438fb0331b",
             "containerId": "a2e5085a-4b94-4035-9fc1-9fb4da2b2147",
             "name": "get_student",
-            "url": "localhost:3000/student?id=1&name=Just A., Student",
+            "url": "localhost:3000/student?id=5&name=Just D., Student",
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-05-25T12:55:11.770Z",
-            "modified": "2024-05-26T06:53:16.125Z",
+            "modified": "2024-05-26T08:53:05.651Z",
             "headers": [],
             "params": [
                 {
                     "name": "id",
-                    "value": "1",
+                    "value": "5",
                     "isPath": false
                 },
                 {
                     "name": "name",
-                    "value": "Just A., Student",
+                    "value": "Just D., Student",
                     "isPath": false
                 }
             ],
@@ -108,12 +108,12 @@
             "method": "POST",
             "sortNum": 40000,
             "created": "2024-05-26T07:43:48.204Z",
-            "modified": "2024-05-26T07:51:26.565Z",
+            "modified": "2024-05-26T08:47:26.523Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "[\n  {\n    \"name\": \"Just A., Student\",\n    \"father_name\": \"Just A., Father\"\n  },\n  {\n    \"name\": \"Just B., Student\",\n    \"father_name\": \"Just B., Father\"\n  }\n]",
+                "raw": "[\n  {\n    \"name\": \"Just C., Student\",\n    \"father_name\": \"Just A., Father\"\n  },\n  {\n    \"name\": \"Just D., Student\",\n    \"father_name\": \"Just B., Father\"\n  }\n]",
                 "form": []
             },
             "tests": []

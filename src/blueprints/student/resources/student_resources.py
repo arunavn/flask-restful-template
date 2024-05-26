@@ -10,7 +10,8 @@ from marshmallow import ValidationError
 from src.config import ApplicationConfig
 from src.blueprints.student.parsers import student_parsers
 from src.utilities.db_utilility import (connect_to_postgres_db1,
-                                        get_query_results_as_df
+                                        get_query_results_as_df,
+                                        insert_dict_to_db
                                         )
 
 app_config = ApplicationConfig(config_path=os.path.join('.', 'config.json'))
@@ -67,6 +68,9 @@ class Student(Resource):
         try:
             students_data = student_parsers.StudentPost(many=False)\
                 .load(request.get_json())
+            con = connect_to_postgres_db1()
+            insert_dict_to_db(students_data, "student", con)
+            con.close()
             return students_data, 201
         except ValidationError as e:
             return {'message': str(e)}, 400
@@ -106,6 +110,10 @@ class Students(Resource):
         try:
             students_data = student_parsers.StudentPost(many=True)\
                 .load(request.get_json())
+            con = connect_to_postgres_db1()
+            for student_data in students_data:
+                insert_dict_to_db(student_data, "student", con)
+            con.close()
             return students_data, 201
         except ValidationError as e:
             return {'message': str(e)}, 400
