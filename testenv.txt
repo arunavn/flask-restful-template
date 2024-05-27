@@ -1,0 +1,19 @@
+#deploy environment [dev, staging, prod]
+ENVIRONMENT=dev 
+
+# Run Config
+PORT=3000
+
+#API-1 detailS
+TOKEN_URL=test1
+CALLBACK_URL=test2
+BASE_URL=test3
+CLIENT_ID=test3
+CLIENT_SECRET=test4
+
+#DB1 config
+DB1_HOST=localhost
+DB1_PORT=5432
+DB1_USERNAME=postgres
+DB1_PASSWORD=""
+DB1_NAME=postgres
