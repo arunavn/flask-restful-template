@@ -13,3 +13,7 @@ pandas==2.2.2
 #Parsers
 webargs==8.4.0
 marshmallow==3.21.2
+
+#Pydantic
+pydantic-2.7.2
+Flask-Pydantic-0.12.0
