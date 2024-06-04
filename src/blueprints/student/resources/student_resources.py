@@ -7,8 +7,9 @@ from flask_restful import Resource
 from flask import request
 from webargs.flaskparser import use_kwargs
 from marshmallow import ValidationError
+from flask_pydantic import validate   # pydantic import
+from src.blueprints.student.parsers import student_parsers  # noqa
 from src.config import ApplicationConfig
-from src.blueprints.student.parsers import student_parsers
 from src.utilities.db_utilility import (connect_to_postgres_db1,
                                         get_query_results_as_df,
                                         insert_dict_to_db
@@ -119,3 +120,39 @@ class Students(Resource):
             return {'message': str(e)}, 400
         except (IndexError, KeyError, ValueError):
             return {'message': 'Could no create students'}, 500
+
+
+class SubjectsEnrolled(Resource):
+    """_summary_
+
+    Args:
+        Resource (_type_): _description_
+    """
+    @validate()
+    def get(self, query: student_parsers.SubjectQueryModel):
+        """_summary_
+
+        Returns:
+            _type_: _description_
+        """
+        print(query.sid)
+        if query.sid == 0:
+            return "id cannot be zero", 400
+        test_subject = student_parsers.Subjects(
+            subject="History",
+            intructor="Teacher A"
+        )
+        list_of_subjects = [test_subject]
+        return student_parsers.SubjectResponseModel(
+            subjects=list_of_subjects
+        ), 200
+
+    @validate()
+    def post(self, body: student_parsers.Subjects):
+        """_summary_
+
+        Returns:
+            _type_: _description_
+        """
+        print(body.subject)
+        return "Enrolled in subject", 201

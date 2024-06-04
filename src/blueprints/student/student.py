@@ -17,4 +17,5 @@ def create_student_bp() -> Blueprint:
     # Add resources
     api.add_resource(student_resources.Student, '/')
     api.add_resource(student_resources.Students, '/students')
+    api.add_resource(student_resources.SubjectsEnrolled, '/subjects')
     return student_bp
